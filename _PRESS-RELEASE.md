@@ -18,27 +18,29 @@ Once the project moves into development, the press release can be used as a touc
  
 ## Heading ##
   > Name the product in a way the reader (i.e. your target customers) will understand.
-
+  - myGym
 ## Sub-Heading ##
   > Describe who the market for the product is and what benefit they get. One sentence only underneath the title.
-
+  - The product targets people who want to structure their workouts.
 ## Summary ##
   > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
-
+  - The product allows the user to create a workout schedule for the week. Not only can they create the schedule, but the user will also be able to query through a database filled with excercises in order to discover and pick ones they like to add to their schedule. It will offer a discriptive UI which will be user friendly and informative.
 ## Problem ##
   > Describe the problem your product solves.
-
+  - Many people who are going to the gym for the first time don't have any structured workouts or don't know what workouts target which body parts. 
 ## Solution ##
   > Describe how your product elegantly solves the problem.
+  - This product helps identify what excerices to do to target the muscle groups of your choice and allows you to add it to your schedule.
 
 ## Quote from You ##
   > A quote from a spokesperson in your company.
-
+  - 'We're making workouts great again!'
 ## How to Get Started ##
   > Describe how easy it is to get started.
-
+  - All the user has to do is pick a muscle group and a list of excercises targeting that muscle group will show up. Then the user and click on it to add it to a specific day on the workout schedule.
 ## Customer Quote ##
   > Provide a quote from a hypothetical customer that describes how they experienced the benefit.
-
+  - 'I didn't know where to start when I first started going to the gym, but myGym made it really easy to look up excercises and throw them into my workout!'
 ## Closing and Call to Action ##
   > Wrap it up and give pointers where the reader should go next.
+  
