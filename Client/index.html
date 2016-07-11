@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app='myGym'>
+  <head>
+    <meta charset="utf-8" />
+    <title>myGym</title>
+  </head>
+	<body>
+		<h1>myGym Schedule</h1>
+		<ul>
+  			<li>Monday</li>
+  			<li>Tuesday</li>
+  			<li>Wednesday</li>
+        <li>Thursday</li>
+        <li>Friday</li>
+        <li>Saturday</li>
+        <li>Sunday</li>
+		</ul>
+    <input type='text' ng-model="search" placeholder="Search for Workouts">
+    <div>
+      <div ng-repeat="excercise in data.workouts | filter:search">
+      </div>
+    </div>
+	</body> 
+</html>
