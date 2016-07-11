@@ -1,0 +1,19 @@
+var mongoose = require('mongoose');
+
+//Declare schema variable
+var Schema = mongoose.Schema;
+
+//Create exercise schema
+
+var exSchema = new Schema({
+  excercise: String,
+  excercisecategory: String,
+  equipment: String,
+  excercisecomment: String,
+  excerciseimage: String
+});
+
+//Compile model
+var Excercise = mongoose.model('Excercise', exSchema);
+
+module.exports = Excercise;
