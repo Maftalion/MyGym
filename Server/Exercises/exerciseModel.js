@@ -1,5 +1,4 @@
 var mongoose = require('mongoose');
-var fs = require('fs')
 //Connect to database
 var Schema = mongoose.Schema;
 mongoose.connect('mongodb://localhost/myGym');

@@ -1,5 +1,5 @@
 var express = require('express');
-var Exercises = require('./Exercises/exerciseModel')
+var Exercises = require('./Exercises/exerciseModel.js')
 //Set up Mongoose if there is time
 var mongoose = require('mongoose');
 
@@ -7,7 +7,7 @@ var mongoose = require('mongoose');
 var app = express();
 
 //Connect to Database
-mongoose.connect('mongodb://localhost/myGym');
+mongoose.createConnection('mongodb://localhost/myGym');
 
 //Create static files
 app.use(express.static(__dirname + '/../Client'));
@@ -17,19 +17,19 @@ app.get('/', function(req, res) {
 	console.log('success')
     res.render('index');
 });
-app.post('/api/exercises', function(req, res){
-	res.json({
-		Exercise : 'Push Ups',
-		Equipment: 'None',
-		Level: 'Beginner',
-		Guide: 'Do a freaking pushup foo'
-	})
-})
 app.get('/api/exercises', function(req, res) {
 	Exercises.find({}).then(function(exercises){
         res.json(exercises);	
 	})	
 })
+// app.post('/api/exercises', function(req, res){
+// 	res.json({
+// 		Exercise : 'Push Ups',
+// 		Equipment: 'None',
+// 		Level: 'Beginner',
+// 		Guide: 'Do a freaking pushup foo'
+// 	})
+// })
 //IF HAVE TIME, SET UP USERS
 
 // app.get('/login', function(req, res) {
