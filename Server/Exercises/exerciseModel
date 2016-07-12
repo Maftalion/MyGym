@@ -1,19 +1,37 @@
 var mongoose = require('mongoose');
-
-//Declare schema variable
+var fs = require('fs')
+//Connect to database
 var Schema = mongoose.Schema;
+mongoose.connect('mongodb://localhost/myGym');
 
 //Create exercise schema
 
-var exSchema = new Schema({
-  excercise: String,
-  excercisecategory: String,
-  equipment: String,
-  excercisecomment: String,
-  excerciseimage: String
+var exerciseSchema = new Schema({
+	Exercise : 'String',
+	Equipment: 'String',
+	Level: 'String',
+	Guide: 'String'
 });
 
-//Compile model
-var Excercise = mongoose.model('Excercise', exSchema);
 
-module.exports = Excercise;
+//Compile model
+var Exercise = mongoose.model('Exercise', exerciseSchema);
+
+
+// new Exercise({
+// 	Exercise : 'Push Ups',
+// 	Equipment: 'None',
+// 	Level: 'Beginner',
+// 	Guide: 'Do a freaking pushup foo'
+// }).save(function (err) {
+//   if (err) {console.log(err)
+//   } else {
+//   	console.log('Success')
+//   }
+// })
+
+
+
+
+
+module.exports = Exercise;
