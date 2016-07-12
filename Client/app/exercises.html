@@ -9,7 +9,7 @@
     <div>Level: {{workout.Level}}</div>
     <div>Equipment needed: {{workout.Equipment}}</div>
     <br>
-    <img src={{workout.Image}} style="width:auto; height:350px;">
+    <img src={{workout.Image}} style="width:auto; height:350px;" ng-click="show = !show">
     <br>
-    <div>Guide: {{workout.Guide}}</div>
+    <div ng-show="show">{{workout.Guide}}</div>
   </div>
