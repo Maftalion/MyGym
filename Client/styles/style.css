@@ -10,6 +10,9 @@
 .workouts .exercise {
   font-weight: bold;
 }
+.workouts div {
+  text-align: center
+}
 h1 {
     text-align: center
 }
@@ -33,4 +36,9 @@ h1 {
 }
 #nav li {
     display: inline-block;
+}
+img {
+    display: block;
+    margin: auto;
+    width: 40%;
 }
