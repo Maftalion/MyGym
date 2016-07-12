@@ -9,7 +9,7 @@ angular.module('myGym', [])
 	var fetchAll = function(){
 		return $http({
 			method: 'GET',
-			url: '/workouts'
+			url: '/api/workouts'
 		})
 		.then(function (res, req){
 			return res.data;
@@ -26,8 +26,10 @@ angular.module('myGym', [])
 	$scope.data = {};
 
 	//fetch all workouts
-	Workouts.fetchAll().then(function(res, req){
-		$scope.data.workouts = res;
-	});
-
+	var intializeEx = function(){
+		Workouts.fetchAll().then(function(excercises){
+			$scope.data.workouts = excercises;
+		});
+  }
+  intializeEx();
 })

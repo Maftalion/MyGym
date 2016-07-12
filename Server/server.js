@@ -7,10 +7,10 @@ var mongoose = require('mongoose');
 var app = express();
 
 //Connect to Database
-mongoose.connect('mongodb://localhost/myGym');
+// mongoose.connect('mongodb://localhost/myGym');
 
 //Create static files
-// app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/../Client'));
 
 //Set up http requests
 app.get('/', function(req, res) {
