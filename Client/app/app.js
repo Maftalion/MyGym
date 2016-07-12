@@ -1,5 +1,5 @@
 angular.module('mygym', ['ngRoute'])
-.config(function($routeProvider, $httpProvider){
+.config(function($routeProvider){
 	$routeProvider
   .when('/exercises', {
     templateUrl: 'app/exercises.html',
