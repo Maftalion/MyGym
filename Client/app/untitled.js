@@ -12,6 +12,7 @@ fs.readFile('/Users/maftalion/Desktop/2016-06-mvp/Client/app/workouts.json','utf
   	for (var key in item) {
       data2.push({
        Excercise: key,
+       Muscle: item[key]['Main Muscle Worked'],
        Equipment: item[key]['Equipment'],
        Level: item[key]['Level'],
        Guide: item[key]['guide'],

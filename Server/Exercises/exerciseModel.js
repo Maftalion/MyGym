@@ -12,41 +12,36 @@ var exerciseSchema = new Schema({
 	Equipment: 'String',
 	Level: 'String',
 	Guide: 'String',
-	Images: 'String'
+	Muscle: 'String',
+	Image: 'String'
 });
 
 
 // //Compile model
 var Exercise = mongoose.model('Exercise', exerciseSchema);
-fs.readFile('/Users/maftalion/Desktop/2016-06-mvp/Client/app/exercises.json','utf8', (err, data) => {
-  if (err) throw err;
-  data = JSON.parse(data)
-  console.log(data[1])
-  // _.each(data, function(item){
-  // 	new Exercise({
-  // 		Exercise: item['Excercise'],
-  // 		Equipment: item['Equipment'],
-  // 		Level: item['Level'],
-  // 		Guide: item['Guide'],
-  // 		Images: item['Images'][0]
-  // 	}).save(function(err){
-  // 		if (err) {console.log(err)
-  // 		} else {
-  // 			console.log('success')
-  // 		}
-  // 	})
-  // })
-})
-// new Exercise({
-// 	Exercise : 'Push Ups',
-// 	Equipment: 'None',
-// 	Level: 'Beginner',
-// 	Guide: 'Do a freaking pushup foo'
-// }).save(function (err) {
-//   if (err) {console.log(err)
-//   } else {
-//   	console.log('Success')
-//   }
+
+
+//Populate database with Exercises--->
+
+// fs.readFile('/Users/maftalion/Desktop/2016-06-mvp/Client/app/exercises.json','utf8', (err, data) => {
+//   if (err) throw err;
+//   data = JSON.parse(data)
+//   // console.log(data[1])
+//   _.each(data, function(item){
+//   	new Exercise({
+//   		Exercise: item['Excercise'],
+//   		Muscle: item['Muscle'],
+//   		Equipment: item['Equipment'],
+//   		Level: item['Level'],
+//   		Guide: item['Guide'],
+//   		Image: item['Images'][0]
+//   	}).save(function(err){
+//   		if (err) {console.log(err)
+//   		} else {
+//   			console.log('success')
+//   		}
+//   	})
+//   })
 // })
 
 
