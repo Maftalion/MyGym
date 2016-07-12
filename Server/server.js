@@ -1,5 +1,5 @@
 var express = require('express');
-
+var Exercises = require('./Exercises/exerciseModel')
 //Set up Mongoose if there is time
 var mongoose = require('mongoose');
 
@@ -7,21 +7,29 @@ var mongoose = require('mongoose');
 var app = express();
 
 //Connect to Database
-// mongoose.connect('mongodb://localhost/myGym');
+mongoose.connect('mongodb://localhost/myGym');
 
 //Create static files
 app.use(express.static(__dirname + '/../Client'));
 
 //Set up http requests
 app.get('/', function(req, res) {
-  res.render('index');
+	console.log('success')
+    res.render('index');
 });
-
-//query workouts
-app.get('/workouts', function(req, res) {
- 
-});
-
+app.post('/api/exercises', function(req, res){
+	res.json({
+		Exercise : 'Push Ups',
+		Equipment: 'None',
+		Level: 'Beginner',
+		Guide: 'Do a freaking pushup foo'
+	})
+})
+app.get('/api/exercises', function(req, res) {
+	Exercises.find({}).then(function(exercises){
+        res.json(exercises);	
+	})	
+})
 //IF HAVE TIME, SET UP USERS
 
 // app.get('/login', function(req, res) {
@@ -45,7 +53,9 @@ app.get('/workouts', function(req, res) {
 // });
 
 //Bind and listen at port
-app.listen(1337);
+app.listen(8080, function () {
+	console.log('Server is up');
+});
 
 
 //export for use in other files

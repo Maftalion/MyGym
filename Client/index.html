@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html ng-app='myGym'>
+<html ng-app='mygym'>
   <head>
     <meta charset="utf-8" />
     <title>myGym</title>
+    <link rel="stylesheet" type="text/css" href="./styles/style.css" />
   </head>
 	<body>
 		<h1>myGym Schedule</h1>
@@ -15,10 +16,10 @@
         <li>Saturday</li>
         <li>Sunday</li>
 		</ul>
-    <input type='text' ng-model="search" placeholder="Search for Workouts">
-    <div>
-      <div ng-repeat="excercise in data.workouts | filter:search">
-      </div>
-    </div>
+    <div ng-view></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.2/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.2/angular-route.min.js"></script>
+    <script src="app/app.js"></script>
 	</body> 
 </html>

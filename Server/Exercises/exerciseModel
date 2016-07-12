@@ -4,7 +4,7 @@ var fs = require('fs')
 var Schema = mongoose.Schema;
 mongoose.connect('mongodb://localhost/myGym');
 
-//Create exercise schema
+// //Create exercise schema
 
 var exerciseSchema = new Schema({
 	Exercise : 'String',
@@ -14,7 +14,7 @@ var exerciseSchema = new Schema({
 });
 
 
-//Compile model
+// //Compile model
 var Exercise = mongoose.model('Exercise', exerciseSchema);
 
 
