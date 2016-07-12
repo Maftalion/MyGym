@@ -1,9 +1,11 @@
-<form>
+<div class="searchbar">  
+  <form>
     <input type='text' ng-model="searchText" placeholder="Search Workouts">
   </form>
-  <div ng-repeat="workout in data.workouts | filter: searchText">
-    <div>{{workout.Exercise}}</div>
-    <div>{{workout.Equipment}}</div>
-    <div>{{workout.Level}}</div>
-    <div>{{workout.Guide}}</div>
+</div>
+  <div class='workouts' ng-repeat="workout in data.workouts | filter: searchText">
+    <div class='exercise'>{{workout.Exercise}}</div>
+    <div>Equipment needed: {{workout.Equipment}}</div>
+    <div>Level: {{workout.Level}}</div>
+    <div>Guide: {{workout.Guide}}</div>
   </div>

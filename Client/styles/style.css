@@ -1,0 +1,36 @@
+.workouts {
+  clear: both;
+  margin-bottom: 5px;
+  padding: 5px;
+  min-height: 50px;
+}
+.workouts:hover {
+  background-color: #F0F8FF;
+}
+.workouts .exercise {
+  font-weight: bold;
+}
+h1 {
+    text-align: center
+}
+.searchbar {
+	display: block;
+    margin: auto;
+    width: 10%;
+    margin-bottom: 30px;
+}
+#nav {
+    text-align: justify;
+    min-width: 500px;
+    padding-left: 40px;
+    padding-right: 40px;
+
+}
+#nav:after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+}
+#nav li {
+    display: inline-block;
+}
