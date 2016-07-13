@@ -14,5 +14,6 @@
     "mongoose": "^4.5.3",
     "request": "^2.36.0",
     "underscore": "^1.8.3"
-  }
+  },
+  "start":"node app.js"
 }
